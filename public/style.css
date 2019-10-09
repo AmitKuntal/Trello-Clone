@@ -1,0 +1,7 @@
+.cardSize,.card-img-top{
+    width: 18vw;
+    height: 10vw;
+}
+.cardSize:hover{
+    background-color: yellow;
+  }
