@@ -1,9 +1,8 @@
 import React from 'react';
 import Card from './card'
 export default function(props){
-    console.log(props)
-    return (<div className="cards">
-            {props.cards?props.cards.map((card)=><Card {...card}/>):""}
+    return (<div className="cards p-1">
+            {props.cards?props.cards.map((card)=><Card {...card} key={card.id}/>):""}
             </div>
 
     )

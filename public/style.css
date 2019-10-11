@@ -6,7 +6,7 @@
     background-color: yellow;
   }
   .boards{
-    height: 90vh;
+    height:92.3vh;
  }
  .lists{
      margin: 0;
@@ -15,6 +15,32 @@
      height:85vh;     
  }
  .cards{
-     max-height:60.3vh;
+    max-height:63.3vh;
      overflow-y: scroll;
+     overflow-x: hidden;
  }
+ ::-webkit-scrollbar {
+    width: .5vw;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(200,200,200,0.3); 
+    border-radius: 10px;
+    opacity:.1;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(200,200,200,0.3); 
+    opacity:.1;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(200,200,200,0.3); 
+  }
+  #myModel{
+      display: none;
+  }
