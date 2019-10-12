@@ -9,7 +9,7 @@ class AddModal extends Component {
         this.setState({modalState:false})
         }
         componentDidMount(){
-             fetch(`https://api.trello.com/1/cards/${this.props.cardId}/checklists?checkItems=all&checkItem_fields=name%2CnameData%2Cpos%2Cstate&filter=all&fields=all&key=3980e9887394ee42fb72d04db7b10450&token=9691da586bb59c0372503e3cd2a1718a551baac861486bf455d3fbff0452a3b1`)
+             fetch(`https://api.trello.com/1/cards/${this.props.cardId}/checklists?checkItems=all&checkItem_fields=name%2CnameData%2Cpos%2Cstate&filter=all&fields=all&key=${key}&token=${token}`)
             .then((res)=>res.json())
             .then((res)=>{
               this.setState({checklists:res})

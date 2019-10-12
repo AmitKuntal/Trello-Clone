@@ -25,7 +25,7 @@ class List extends Component {
   }
   addCard = name => {
     fetch(
-      `https://api.trello.com/1/cards?name=${name}&idList=${this.props.id}&keepFromSource=all&key=3980e9887394ee42fb72d04db7b10450&token=9691da586bb59c0372503e3cd2a1718a551baac861486bf455d3fbff0452a3b1`,
+      `https://api.trello.com/1/cards?name=${name}&idList=${this.props.id}&keepFromSource=all&key=${key}&token=${token}`,
       { method: "POST" }
     )
       .then(res => res.json())
@@ -36,7 +36,7 @@ class List extends Component {
       });
   };
   deleteCard = (id)=>{
-      fetch(`https://api.trello.com/1/cards/${id}?key=3980e9887394ee42fb72d04db7b10450&token=9691da586bb59c0372503e3cd2a1718a551baac861486bf455d3fbff0452a3b1`,{method:"DELETE"})
+      fetch(`https://api.trello.com/1/cards/${id}?key=${key}&token=${token}`,{method:"DELETE"})
         .then((res)=>{
             let newcards= this.state.cardsDetail.filter((card)=> card.id !== id)
             this.setState({cardsDetail:newcards})
